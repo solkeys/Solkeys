@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Independent Pianist Mentorship</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for an elegant look -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">The Independent Pianist</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#program">The Program</a></li>
+            <li><a href="#quiz">Suitability Quiz</a></li>
+            <li><a href="#enroll" class="btn-small">Enroll Now</a></li>
+        </ul>
+    </nav>
+
+    <!-- Landing/Hero Section -->
+    <header id="hero">
+        <div class="hero-content">
+            <h1>The Independent Pianist Mentorship</h1>
+            <p>A 12-month transformative piano journey for absolute beginners aged 15 and above. Go from zero experience to playing with confidence and independence.</p>
+            <a href="#quiz" class="btn">Take the Suitability Quiz</a>
+        </div>
+    </header>
+
+    <!-- Program Details Section -->
+    <section id="program">
+        <h2>About The Mentorship</h2>
+        <div class="divider"></div>
+        <p class="section-intro">This isn't just about learning songs; it's about understanding music. Over 12 months, we build a foundation that lasts a lifetime.</p>
+        
+        <div class="roadmap">
+            <div class="phase">
+                <h3>Months 1-4: The Foundation</h3>
+                <p>Posture, hand position, reading sheet music, and playing your first two-handed melodies.</p>
+            </div>
+            <div class="phase">
+                <h3>Months 5-8: Building Fluency</h3>
+                <p>Scales, chords, pedal technique, and early intermediate repertoire.</p>
+            </div>
+            <div class="phase">
+                <h3>Months 9-12: The Independent Pianist</h3>
+                <p>Advanced dynamics, sight-reading strategies, and learning how to teach yourself new pieces.</p>
+            </div>
+        </div>
+
+        <div class="fees-faq">
+            <div class="fees">
+                <h3>Tuition & Fees</h3>
+                <p><strong>$150 / Month</strong> (Billed monthly)</p>
+                <ul>
+                    <li>✓ 45-Minute weekly private lesson</li>
+                    <li>✓ Custom sheet music & worksheets</li>
+                    <li>✓ Direct messaging support between lessons</li>
+                </ul>
+            </div>
+            <div class="faq">
+                <h3>Frequently Asked Questions</h3>
+                <p><strong>Do I need a real piano?</strong><br>An acoustic piano is great, but a weighted-key digital piano (88 keys) is perfectly fine.</p>
+                <p><strong>What if I miss a lesson?</strong><br>We require 24 hours notice for rescheduling, otherwise the lesson is forfeited.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Suitability Quiz Section -->
+    <section id="quiz">
+        <h2>Suitability Quiz</h2>
+        <div class="divider"></div>
+        <p class="section-intro">To ensure this program is the perfect fit for you, please complete this quick check before booking.</p>
+        
+        <!-- Note: To make this form actually send to your email, you can sign up for Formspree.io and paste their link in the action="" attribute below -->
+        <form class="quiz-form" action="#" method="POST">
+            <div class="form-group">
+                <label>Are you 15 years of age or older?</label>
+                <select required>
+                    <option value="">Select...</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Do you have access to an acoustic piano or an 88-key weighted digital keyboard?</label>
+                <select required>
+                    <option value="">Select...</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No, but I will get one before lessons start</option>
+                    <option value="none">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>What is your current experience level?</label>
+                <select required>
+                    <option value="">Select...</option>
+                    <option value="beginner">Absolute Beginner</option>
+                    <option value="little">Played a little bit years ago</option>
+                    <option value="advanced">I already read music well (Note: This program is for beginners)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Are you able to commit to at least 20 minutes of practice, 5 days a week?</label>
+                <select required>
+                    <option value="">Select...</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>What is your ultimate goal with the piano?</label>
+                <textarea rows="4" placeholder="E.g., I want to play classical music, I want to play pop songs for my friends..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn">Submit & Proceed to Booking</button>
+        </form>
+    </section>
+
+    <!-- Booking & Checkout Section -->
+    <section id="enroll">
+        <h2>Secure Your Spot</h2>
+        <div class="divider"></div>
+        <p class="section-intro">Passed the quiz? You're ready to start your journey. Follow these two simple steps.</p>
+        
+        <div class="enroll-steps">
+            <div class="step">
+                <h3>Step 1: Choose Your Time</h3>
+                <p>Select your preferred weekly lesson slot from my calendar.</p>
+                <!-- Replace the '#' with your Calendly link -->
+                <a href="#" class="btn btn-outline" target="_blank">Open Calendar (Calendly)</a>
+            </div>
+            <div class="step">
+                <h3>Step 2: Complete Payment</h3>
+                <p>Set up your monthly tuition. Once paid, you will receive an automatic welcome email with your setup guide.</p>
+                <!-- Replace the '#' with your Stripe Payment Link -->
+                <a href="#" class="btn" target="_blank">Proceed to Checkout (Stripe)</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 The Independent Pianist Mentorship. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

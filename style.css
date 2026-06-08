@@ -1,24 +1,24 @@
 /* --- Global Variables for Black & Rose Gold Theme --- */
 :root {
-    --bg-dark: #0d0c0c;
-    /* Luxury deep warm black */
-    --bg-light: #151314;
-    /* Warm dark charcoal */
-    --bg-card: #1c191a;
-    /* Textured lighter charcoal */
-    --text-main: #fcf9f7;
-    /* Soft warm ivory/white */
-    --text-muted: #bcafae;
-    /* Soft rose-gray for secondary text */
-    --rose-gold: #c58f97;
-    /* Primary metallic-toned rose gold */
-    --rose-gold-dark: #965b64;
+    --bg-dark: #070708;
+    /* Luxury deep silky black */
+    --bg-light: #0e0e10;
+    /* Silky dark charcoal */
+    --bg-card: #151518;
+    /* Sleek card background */
+    --text-main: #faf6eb;
+    /* Luxury light cream color */
+    --text-muted: #c5beb5;
+    /* Soft warm silver-gray */
+    --rose-gold: #b76e79;
+    /* Exact shade of Rose Gold */
+    --rose-gold-dark: #8c4f58;
     /* Deep copper rose gold */
-    --rose-gold-hover: #dfa3ad;
+    --rose-gold-hover: #cf8d97;
     /* Highlight rose gold for hovers */
-    --gold-accent: #e5c07b;
+    --gold-accent: #e8c480;
     /* Champagne gold accent */
-    --border-color: rgba(197, 143, 151, 0.15);
+    --border-color: rgba(183, 110, 121, 0.15);
     /* Subtle metallic border tint */
 
     --font-heading: 'Cormorant Garamond', serif;
@@ -74,12 +74,25 @@ nav {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
     font-family: var(--font-accent);
     font-size: 1.3rem;
     font-weight: 700;
     color: var(--rose-gold);
     letter-spacing: 2px;
     text-transform: uppercase;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.logo a:hover {
+    color: var(--rose-gold-hover);
+    transform: scale(1.03);
 }
 
 .nav-links {
@@ -139,7 +152,7 @@ nav {
 .btn {
     display: inline-block;
     background: linear-gradient(135deg, var(--rose-gold) 0%, var(--rose-gold-dark) 100%);
-    color: #fff;
+    color: var(--text-main);
     padding: 16px 36px;
     text-decoration: none;
     font-family: var(--font-body);
@@ -163,7 +176,7 @@ nav {
 
 .btn-small {
     background: var(--rose-gold);
-    color: #fff !important;
+    color: var(--text-main) !important;
     padding: 8px 18px;
     border-radius: 4px;
     font-weight: 600;
@@ -205,10 +218,23 @@ h2 {
 }
 
 .divider {
-    width: 80px;
+    width: 100px;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold-accent) 50%, transparent);
+    background: linear-gradient(90deg, transparent, var(--rose-gold) 20%, var(--rose-gold) 80%, transparent);
     margin: 0 auto 35px auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divider::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 8px;
+    background-color: var(--gold-accent);
+    border-radius: 1px;
 }
 
 .section-intro {
@@ -227,7 +253,7 @@ h2 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(13, 12, 12, 0.8), rgba(13, 12, 12, 0.8)), url('https://images.unsplash.com/photo-1552422535-c45813c61732?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover;
+    background: linear-gradient(rgba(7, 7, 8, 0.8), rgba(7, 7, 8, 0.8)), url('hero_piano_candle.png') center/cover;
     padding: 0 10%;
     position: relative;
 }
@@ -298,8 +324,8 @@ h2 {
 
 /* --- System Breakthrough Card --- */
 .system-breakthrough {
-    background: linear-gradient(135deg, #1f1416 0%, var(--bg-dark) 100%);
-    border: 1px solid rgba(197, 143, 151, 0.25);
+    background: linear-gradient(135deg, #161012 0%, var(--bg-dark) 100%);
+    border: 1px solid rgba(183, 110, 121, 0.25);
     padding: 50px 40px;
     border-radius: 8px;
     text-align: center;
@@ -329,8 +355,8 @@ h2 {
     font-weight: 600;
 }
 
-/* --- Program Section & Features Grid --- */
-.program-features {
+/* --- Pathway Section & Features Grid --- */
+.pathway-features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
@@ -414,6 +440,149 @@ h2 {
     font-weight: 300;
 }
 
+/* --- Premium Pricing Plans & Cohort styling --- */
+.pricing-plans {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0 30px 0;
+}
+
+.price-card {
+    flex: 1;
+    background: linear-gradient(145deg, var(--bg-card) 0%, var(--bg-dark) 100%);
+    border: 1px solid var(--border-color);
+    padding: 24px 15px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.price-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(197, 143, 151, 0.3);
+}
+
+.price-card.featured {
+    border-color: var(--rose-gold);
+    box-shadow: 0 10px 25px rgba(197, 143, 151, 0.15);
+}
+
+.price-card.featured .badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--rose-gold);
+    color: var(--text-main);
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.price-card h4 {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.price-card .price {
+    font-size: 1.8rem;
+    font-family: var(--font-heading);
+    color: var(--rose-gold);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.price-card .billing {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.cohort-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(229, 192, 123, 0.08); /* subtle gold accent tint */
+    border: 1px dashed rgba(229, 192, 123, 0.3);
+    color: var(--text-main);
+    padding: 14px 20px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    margin: 20px 0;
+    line-height: 1.4;
+}
+
+.cohort-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.cohort-badge strong {
+    color: var(--gold-accent);
+}
+
+.investment-features-list {
+    list-style: none;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.investment-features-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.investment-features-list .icon-check {
+    color: var(--rose-gold);
+    font-weight: bold;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    line-height: 1;
+    margin-top: 2px;
+}
+
+.faq-list {
+    max-height: 420px;
+    overflow-y: auto;
+    padding-right: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-color) rgba(255, 255, 255, 0.02);
+}
+
+/* Custom scrollbar for FAQ list */
+.faq-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.faq-list::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 4px;
+}
+
+.faq-list::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.faq-list::-webkit-scrollbar-thumb:hover {
+    background: var(--rose-gold);
+}
+
 .faq p {
     font-size: 1rem;
     margin-bottom: 25px;
@@ -429,8 +598,8 @@ h2 {
 
 /* --- Warning Box for Enrollment Check --- */
 .warning-box {
-    background-color: #1a0f10;
-    border: 1px solid rgba(197, 143, 151, 0.3);
+    background-color: rgba(183, 110, 121, 0.05);
+    border: 1px solid rgba(183, 110, 121, 0.3);
     padding: 30px;
     border-radius: 6px;
     max-width: 650px;
@@ -450,7 +619,7 @@ h2 {
 .warning-box p {
     margin-bottom: 0;
     font-weight: 300;
-    color: #dfd5d4;
+    color: var(--text-main);
 }
 
 /* --- Quiz Form --- */
@@ -498,44 +667,67 @@ textarea:focus {
 }
 
 /* --- Enroll Section --- */
-.enroll-steps {
-    display: flex;
-    gap: 40px;
-    max-width: 950px;
+.checkout-card {
+    max-width: 650px;
     margin: 0 auto;
-}
-
-.step {
-    flex: 1;
     text-align: center;
     background: linear-gradient(145deg, var(--bg-card) 0%, var(--bg-dark) 100%);
-    padding: 50px 40px;
+    padding: 55px 40px;
     border: 1px solid var(--border-color);
-    border-radius: 8px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
 }
 
-.step:hover {
-    transform: translateY(-5px);
+.checkout-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(183, 110, 121, 0.25);
 }
 
-.step h3 {
+.checkout-card h3 {
     margin-bottom: 20px;
-    color: var(--text-main);
-    font-family: var(--font-body);
+    color: var(--rose-gold);
+    font-family: var(--font-heading);
     font-weight: 600;
-    text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size: 2rem;
     letter-spacing: 1px;
 }
 
-.step p {
+.checkout-description {
     font-weight: 300;
     color: var(--text-muted);
-    font-size: 0.95rem;
-    line-height: 1.7;
-    margin-bottom: 25px;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 35px;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-checkout {
+    padding: 18px 45px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    box-shadow: 0 6px 20px rgba(150, 91, 100, 0.4);
+    letter-spacing: 1.5px;
+    margin-top: 0;
+}
+
+.checkout-footer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 35px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 25px;
+}
+
+.trust-badge {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 /* --- Footer --- */
@@ -550,6 +742,7 @@ footer {
 
 /* --- Responsive Media Queries --- */
 @media (max-width: 768px) {
+
     /* Mobile Navigation Drawer */
     .menu-toggle {
         display: flex;
@@ -625,22 +818,8 @@ footer {
         margin-bottom: 30px;
     }
 
-    /* Breakthrough Section Card */
-    .system-breakthrough {
-        padding: 35px 24px;
-        margin-top: 40px;
-    }
-
-    .system-breakthrough h3 {
-        font-size: 1.6rem;
-    }
-
-    .system-breakthrough p {
-        font-size: 1rem;
-    }
-
-    /* Program Section Grid Adjustments */
-    .program-features {
+    /* Pathway Section Grid Adjustments */
+    .pathway-features {
         gap: 20px;
     }
 
@@ -666,13 +845,26 @@ footer {
         padding: 35px 24px;
     }
 
-    /* Secure Your Spot Step cards column layout */
-    .enroll-steps {
-        flex-direction: column;
-        gap: 24px;
+    /* Secure Your Spot Card mobile styling */
+    .checkout-card {
+        padding: 40px 24px;
     }
 
-    .step {
-        padding: 40px 24px;
+    .checkout-card h3 {
+        font-size: 1.6rem;
+    }
+
+    .checkout-footer {
+        flex-direction: column;
+        gap: 15px;
+        padding-top: 20px;
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-plans {
+        flex-direction: column;
+        gap: 15px;
     }
 }

@@ -480,6 +480,14 @@
             }
         }
 
+        // Handle flip cards on mobile/touch devices
+        const flipCards = document.querySelectorAll('.flip-card');
+        flipCards.forEach(card => {
+            card.addEventListener('click', function() {
+                this.classList.toggle('flipped');
+            });
+        });
+
         // Handle quiz form submission
         const quizForm = document.querySelector('.quiz-form');
         if (quizForm) {
